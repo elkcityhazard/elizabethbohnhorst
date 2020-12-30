@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -49,6 +50,7 @@ p {
 }
 
 a {
+  font-size: 1.25em;
   text-decoration: none;
 }
 
