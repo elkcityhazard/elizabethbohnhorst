@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'EB Garamond', serif;
+    scroll-behavior: smooth;
+}
+
+article, section, main, aside, figure, figcaption {
+    display: block;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+    margin: 0 auto;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+li a {
+    color: #000;
+    display: block;
+    font-weight: 600;
+    padding: 1em 1.5em;
+    position: relative;
+    &:after {
+        background: linear-gradient(0.1turn, #999, #666, #333);
+        bottom: 7px;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 250ms ease-in-out;
+        width: 100%;
+    }
+    &:hover::after {
+        transform: scaleX(100%);
+    }
+}
+
+
+header {
+    .row {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        label {
+            margin: 0 auto;
+            min-height: 25px;
+            padding: 0;
+            width: 100%;
+            .hamburger {
+                background: #333;
+                border-radius: 10px;
+                display: block;
+                margin-left: 1em;
+                margin-top: 1em;
+                padding: 0;
+                position: relative;
+                height: 3px;
+                width: 33px;
+                &:before {
+                    background: #333;
+                    border-radius: 10px;
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    position: absolute;
+                    top: 7px;
+                    width: 33px;
+                }
+                &:after {
+                    background: #333;
+                    border-radius: 10px;
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    position: absolute;
+                    bottom: 7px;
+                    width: 33px;
+                }
+            }
+        }
+        label + #nav-toggle {
+            display: none;
+        }
+        #nav-toggle + nav {
+            height: 0;
+            overflow: hidden;
+            transform-origin: left top;
+            transition: height 250ms ease-in-out 0.1s;
+        }
+        #nav-toggle:checked + nav {
+            height: 400px;
+        }
+        nav {
+            padding-top: 21px;
+            ul {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
