@@ -103,6 +103,9 @@ header .row label {
   padding: 1em 2em;
   max-width: 100%;
 }
+header .row label h1 {
+  font-size: 1.1em;
+}
 header .row label .hamburger {
   background: #333;
   border-radius: 10px;
