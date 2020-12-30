@@ -113,7 +113,7 @@ header .row label .hamburger {
   padding: 0;
   position: relative;
   height: 7px;
-  width: 75px;
+  width: 50px;
 }
 header .row label .hamburger:before {
   background: #333;
@@ -123,7 +123,7 @@ header .row label .hamburger:before {
   height: 7px;
   position: absolute;
   top: -10px;
-  width: 75px;
+  width: 50px;
 }
 header .row label .hamburger:after {
   background: #333;
@@ -133,7 +133,7 @@ header .row label .hamburger:after {
   height: 7px;
   position: absolute;
   bottom: -10px;
-  width: 75px;
+  width: 50px;
 }
 header .row label + #nav-toggle {
   display: none;
