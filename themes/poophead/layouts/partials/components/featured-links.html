@@ -7,7 +7,7 @@
             {{range .Site.Data.publications }}
             <div class="card">
                 <header class="card-header">
-                    <h3><a href="{{ .url }}" rel="nofollow noreferrer" target="_blank" title="Trop Magazine">{{ .name }}</a></h3>
+                    <h3><a href="{{ .url }}" rel="nofollow noreferrer" target="_blank" title="{{ .name }}">{{ .name }}</a></h3>
                 </header>
                 <p>{{ .description }}</p>
             </div>
