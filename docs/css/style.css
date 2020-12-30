@@ -103,7 +103,7 @@ header .row label {
   padding: 1em 2em;
   max-width: 100%;
 }
-header .row label h1 {
+header .row label a h1 {
   font-size: 1.1em;
 }
 header .row label .hamburger {

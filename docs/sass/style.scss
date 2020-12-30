@@ -103,8 +103,10 @@ header {
             min-height: 25px;
             padding: 1em 2em;
             max-width: 100%;
-            h1 {
-                font-size: 1.1em;
+            a {
+                h1 {
+                    font-size: 1.1em;
+                }
             }
             .hamburger {
                 background: #333;
