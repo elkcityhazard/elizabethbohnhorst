@@ -17,6 +17,10 @@ article, section, main, aside, figure, figcaption {
   padding: 1em;
 }
 
+figure, figcaption {
+  text-align: center;
+}
+
 img {
   display: block;
   margin: 0 auto;
@@ -36,12 +40,20 @@ h6 {
 }
 
 p {
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1.5;
   margin: 0 auto;
-  padding: 1em;
+  max-width: 60ch;
+  padding: 1.25em;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
 }
 
 li a {
@@ -69,47 +81,54 @@ li a:hover::after {
   transform: scaleX(100%);
 }
 
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: 968px;
+}
+
 header .row {
   display: block;
   width: 100%;
   margin: 0 auto;
 }
 header .row label {
-  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em auto;
   min-height: 25px;
-  padding: 0;
-  width: 100%;
+  padding: 1em 2em;
+  max-width: 100%;
 }
 header .row label .hamburger {
   background: #333;
   border-radius: 10px;
   display: block;
-  margin-left: 1em;
-  margin-top: 1em;
   padding: 0;
   position: relative;
-  height: 3px;
-  width: 33px;
+  height: 7px;
+  width: 75px;
 }
 header .row label .hamburger:before {
   background: #333;
   border-radius: 10px;
   content: "";
   display: block;
-  height: 3px;
+  height: 7px;
   position: absolute;
-  top: 7px;
-  width: 33px;
+  top: -10px;
+  width: 75px;
 }
 header .row label .hamburger:after {
   background: #333;
   border-radius: 10px;
   content: "";
   display: block;
-  height: 3px;
+  height: 7px;
   position: absolute;
-  bottom: 7px;
-  width: 33px;
+  bottom: -10px;
+  width: 75px;
 }
 header .row label + #nav-toggle {
   display: none;
@@ -132,6 +151,11 @@ header .row nav ul {
   flex-direction: column;
   list-style: none;
   justify-content: space-evenly;
+}
+
+.card {
+  display: block;
+  margin: 1em auto;
 }
 
 /*# sourceMappingURL=style.css.map */
