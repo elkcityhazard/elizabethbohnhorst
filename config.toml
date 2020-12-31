@@ -4,3 +4,20 @@ title = "Elizabeth Bohnhorst"
 theme = "poophead"
 publishDir = "docs"
 
+
+
+
+
+[menu]
+
+  [[menu.social]]
+    name = "Facebook"
+    pre = "<i class='fa fa-facebook'></i>"
+    url = "https://www.facebook.com/profile.php?id=2320156"
+    weight = 0
+
+  [[menu.social]]
+    name = "linkedin"
+    pre = "<i class='fa fa-linkedin'></i>"
+    url = "/getting-started/"
+    weight = 10

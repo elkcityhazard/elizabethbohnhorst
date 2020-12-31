@@ -15,7 +15,7 @@ body {
 article, section, main, aside, figure, figcaption {
     display: block;
     margin: 0 auto;
-    padding: 1em;
+    padding: .25em;
 }
 
 figure, figcaption {
@@ -46,7 +46,7 @@ p {
     line-height: 1.5;
     margin: 0 auto;
     max-width: 60ch;
-    padding: 1.25em;
+    padding-top: 1em;
 }
 
 a {
@@ -82,7 +82,7 @@ li a {
     padding: 1em 1.5em;
     position: relative;
     &:after {
-        background: linear-gradient(0.1turn, #999, #666, #333);
+        background: linear-gradient(0.5turn, #999, #666, #333);
         bottom: 7px;
         content: '';
         display: block;
@@ -116,42 +116,59 @@ header {
             align-items: center;
             display: flex;
             justify-content: space-between;
-            margin: 2em auto;
+            margin: 2em auto 0;
             min-height: 25px;
             padding: 1em 2em;
             max-width: 100%;
             a {
                 h1 {
-                    font-size: .75em;
+                    font-size: 1em;
                 }
             }
             .hamburger {
                 background: #333;
                 border-radius: 10px;
                 display: block;
+                height: 4px;
                 padding: 0;
                 position: relative;
-                height: 7px;
-                width: 50px;
+                transition: transform 350ms ease-in-out 0.3s;
+                -moz-transition: transform 350ms ease-in-out 0.3s;
+                -webkit-transition: transform 350ms ease-in-out 0.3s;
+                width: 33px;
                 &:before {
                     background: #333;
                     border-radius: 10px;
                     content: '';
                     display: block;
-                    height: 7px;
+                    height: 4px;
                     position: absolute;
                     top: -10px;
-                    width: 50px;
+                    width: 33px;
                 }
                 &:after {
                     background: #333;
                     border-radius: 10px;
                     content: '';
                     display: block;
-                    height: 7px;
+                    height: 4px;
                     position: absolute;
                     bottom: -10px;
-                    width: 50px;
+                    width: 33px;
+                }
+            }
+            .turn {
+                background: #fff;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) rotateZ(45deg);
+                }
+                &:after {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%) rotateZ(-45deg);
                 }
             }
         }
@@ -169,7 +186,7 @@ header {
         }
 
         nav {
-            padding-top: 21px;
+            padding: 0;
             ul {
                 align-items: center;
                 display: flex;
