@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="{{ if .IsHome }} {{ .Description}}  {{ else }} {{.Params.description}} {{ end }}">
-        <meta name="author" content="Andrew M McCall">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Pre Connections -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="{{ if .IsHome }} {{ .Description}}  {{ else }} {{.Params.description}} {{ end }}"
+    />
+    <meta name="author" content="Andrew M McCall" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Pre Connections -->
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-        <!-- End Preconnects -->
-        <title>{{ if .IsHome }} {{ .Site.Title}} {{ else }} {{ .Site.Title}} - {{ .Params.title }} {{ end }}</title>
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap" rel="stylesheet"> 
-    </head>
-    <body>
-        <div class="wrapper">
-            <header>
-                <div class="row">
-                    <label for="nav-toggle" aria-role="navigation">
-                        <span class="hamburger"></span>
-                        <a href="{{ .Site.BaseURL}}" title="{{ .Title }}"><h1>{{ .Site.Title }}</h1></a>
-                    </label>
-                    <input type="checkbox" name="nav-toggle" id="nav-toggle">
-                    <nav>
-                        <ul>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Writing</a></li>
-                            <li><a href="">Art</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li><a href="">Home</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="row">
-                    <figure>
-                        <img src="{{ .Site.BaseURL}}images/sloth.jpg" alt="self portrait">
-                        <figcaption>Hello my name is Elizabeth Bohnhorst.  I am an author, artist, and Sopranos enthusiast.</figcaption>
-                    </figure>
-                    <p></p>
-                </div>
-            </header>
-            {{ partial "components/featured-links.html" . }}
-
-            {{ partial "components/social-contact.html" . }}
+    <!-- End Preconnects -->
+    <title>
+      {{ if .IsHome }} {{ .Site.Title}} {{ else }} {{ .Site.Title}} - {{.Params.title }} {{ end }}
+    </title>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="row">
+          <label for="nav-toggle" aria-role="navigation">
+            <span class="hamburger"></span>
+            <a href="{{ .Site.BaseURL}}" title="{{ .Title }}"
+              ><h1>{{ .Site.Title }}</h1></a
+            >
+          </label>
+          <input type="checkbox" name="nav-toggle" id="nav-toggle" />
+          <nav>
+            <ul>
+              <li><a href="">About</a></li>
+              <li><a href="">Writing</a></li>
+              <li><a href="">Art</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Home</a></li>
+            </ul>
+          </nav>
         </div>
-        <script src="{{ .Site.BaseURL}}js/script.js"></script>
-</body>
+        <div class="row">
+          <div class="col">
+            <figure>
+              <img
+                src="{{ .Site.BaseURL}}images/sloth.jpg"
+                alt="self portrait"
+              />
+            </figure>
+          </div>
+          <div class="col">
+              <header>
+                  <h3>Hello, my name is <strong>Elizabeth Bohnhorst</strong>.</h3>
+              </header>
+          </div>
+
+          <p></p>
+        </div>
+      </header>
+      {{ partial "components/featured-links.html" . }} {{ partial "components/social-contact.html" . }}
+    </div>
+    <script src="{{ .Site.BaseURL}}js/script.js"></script>
+  </body>
 </html>

@@ -1,22 +1,70 @@
 <article class="row">
-    <header class="article-header">
-        <h2 class="article-header__title">Contact Elizabeth</h2>
-        <p>Interested in working with me?  Contact me to discuss a future project or schedule a consultation.</p>
-    </header>
-    <section class="section-body__content">
-        <div class="card-container">
-            <div class="card">
-                <header class="card-header">
-                    <h3><a href="" rel="nofollow noreferrer" target="_blank" title="{{ .name }}">{{ .name }}</a></h3>
-                </header>
-                <p></p>
+  <header class="article-header">
+    <h2 class="article-header__title">Contact Elizabeth</h2>
+    <p>
+      Interested in working with me? Contact me to discuss a future project or
+      schedule a consultation.
+    </p>
+  </header>
+  <section class="section-body__content">
+    <div class="card-container">
+      <div class="card">
+        <header class="card-header">
+          <h3>Contact Me</h3>
+        </header>
+        <form
+          action="https://api.formcake.com/api/form/10075f45-7b56-4a91-958a-bac93753100f/submission"
+          method="post"
+          id="contact-form"
+        >
+          <fieldset>
+            <legend>Contact Details</legend>
+            <div class="form-control">
+              <label for="name">Name: </label>
+              <div class="message-control">
+                <input type="text" name="name" id="name" />
+                <small id="no-name"></small>
+              </div>
             </div>
-
-            
-        </div>
-        <ul>
-
-            <li></li>
-        </ul>
-    </section>
+            <div class="form-control">
+              <label for="email">Email: </label>
+              <div class="message-control">
+                <input type="email" name="email" id="email" />
+                <small id="no-email"></small>
+              </div>
+            </div>
+            <div class="form-control">
+              <label for="subject">Subject: </label>
+              <div class="message-control">
+                <input type="text" name="subject" id="subject" />
+                <small id="no-subject"></small>
+              </div>
+            </div>
+            <div class="form-control">
+              <label for="message">Message: </label>
+              <div class="message-control">
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+                <small id="no-message"></small>
+              </div>
+            </div>
+            <div class="form-control">
+              <button type="submit">Submit</button>
+              <button type="reset">Reset</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <ul>
+      <li></li>
+    </ul>
+  </section>
 </article>
+
+<!--
+    https://api.formcake.com/api/form/10075f45-7b56-4a91-958a-bac93753100f/submission" -->

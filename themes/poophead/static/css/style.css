@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   font-size: 18px;
   margin: 0;
   padding: 0;
@@ -12,13 +13,19 @@ body {
   scroll-behavior: smooth;
 }
 
-article, section, main, aside, figure, figcaption {
+article,
+section,
+main,
+aside,
+figure,
+figcaption {
   display: block;
   margin: 0 auto;
   padding: 0.25em;
 }
 
-figure, figcaption {
+figure,
+figcaption {
   text-align: center;
 }
 
@@ -38,6 +45,11 @@ h6 {
   display: block;
   margin: 0 auto;
   text-align: center;
+}
+
+h3 strong {
+  color: indigo;
+  font-weight: 900;
 }
 
 p {
@@ -110,6 +122,15 @@ header .row {
   display: block;
   width: 100%;
   margin: 0 auto;
+}
+header .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+header .row .col {
+  margin: 0 auto;
+  width: 100%;
 }
 header .row label {
   align-items: center;
@@ -198,6 +219,112 @@ header .row nav ul li a:visited {
 .card {
   display: block;
   margin: 1em auto;
+}
+
+/*****************
+**Form Controls***
+******************/
+form {
+  margin: 0 auto;
+  max-width: 60ch;
+}
+
+.form-control {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.33em 0.25em;
+  width: 100%;
+}
+.form-control .message-control {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-control:last-child {
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 50%;
+}
+
+fieldset,
+legend {
+  border: none;
+}
+
+legend {
+  visibility: hidden;
+}
+
+input {
+  border: 1px solid #888;
+  display: inline-block;
+  margin: 0 auto;
+  transition: background 350ms ease-in-out;
+  width: 100%;
+}
+
+textarea {
+  margin: 0 auto;
+  max-width: 251px;
+}
+
+input:focus-within {
+  background: lightskyblue;
+  border: 0;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+small {
+  color: red;
+  flex: 100%;
+  margin: 0 auto;
+  min-height: 1em;
+  opacity: 0;
+  padding: 0.25em 0.33em;
+  text-align: left;
+  transition: opacity 250ms ease-in-out 0.1s;
+  -webkit-transition: opacity 250ms ease-in-out 0.1s;
+  width: 100%;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+button {
+  background-color: indigo;
+  color: #fff;
+  margin: 0 auto;
+  padding: 0.25em 0.33em;
+}
+
+.form-control > label {
+  font-weight: 500;
+  margin-right: 1em;
+  min-width: 60px;
+}
+
+@media screen and (min-width: 968px) {
+  header .row .col {
+    float: left;
+    width: 50%;
+  }
+
+  form {
+    margin: 0 auto;
+    max-width: auto;
+  }
+  form .form-control {
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  form .form-control:last-child {
+    justify-content: center;
+    padding-left: 2em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
