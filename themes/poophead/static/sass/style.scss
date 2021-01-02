@@ -400,9 +400,12 @@ button {
       margin: 0 auto;
       max-width: 400px;
       &:last-child {
-        justify-content: center;
-        padding-left: 2em;
+        justify-content: space-evenly;
+        width: 100%;
       }
+    }
+    button {
+        display: inline;
     }
   }
 }

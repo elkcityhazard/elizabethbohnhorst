@@ -390,8 +390,11 @@ button {
     max-width: 400px;
   }
   form .form-control:last-child {
-    justify-content: center;
-    padding-left: 2em;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  form button {
+    display: inline;
   }
 }
 
