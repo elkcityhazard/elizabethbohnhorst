@@ -1,0 +1,39 @@
+<header>
+    <div class="row">
+      <label for="nav-toggle" aria-role="navigation">
+        <span class="hamburger"></span>
+        <a href="{{ .Site.BaseURL}}" title="{{ .Title }}"
+          ><h1>{{ .Site.Title }}</h1></a
+        >
+      </label>
+      <input type="checkbox" name="nav-toggle" id="nav-toggle" />
+      <nav>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Writing</a></li>
+          <li><a href="">Art</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="row">
+      <div class="col">
+        <figure>
+          <img
+            src="{{ .Site.BaseURL}}images/e-portrait.png"
+            alt="self portrait"
+          />
+        </figure>
+      </div>
+      <div class="col">
+          <header class="hello">
+              <h3>Hello, my name is <strong>Elizabeth Bohnhorst</strong>.</h3>
+              <p class="description">Elizabeth Bohnhorst's poetry has appeared in The Pinch, Camroc Press Review, Word Riot, The Austin Poetry Anthology, The Dunes Review, and elsewhere. She has a terrible short-term memory and would love advice on how to remedy this.</p>
+          </header>
+          {{ partial "components/quotes.html" . }}
+      </div>
+
+      <p></p>
+    </div>
+  </header>
