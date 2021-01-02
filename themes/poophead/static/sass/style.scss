@@ -29,6 +29,10 @@ figcaption {
   text-align: center;
 }
 
+figure img {
+    border-radius: 50%;
+}
+
 img {
   display: block;
   margin: 0 auto;
@@ -119,10 +123,11 @@ li a {
 }
 
 header {
+    margin-bottom: 1em;
   .row {
     display: block;
     width: 100%;
-    margin: 0 auto;
+    margin: 1em auto 0;
     &:after {
         content: '';
         display: table;
@@ -225,9 +230,29 @@ header {
   }
 }
 
+.hello {
+    padding: 1em;
+    h3 {
+        font-size: 2em;
+        text-align: left;
+        strong {
+            font-size: 2em;
+        }
+    }
+}
+
 .card {
   display: block;
   margin: 1em auto;
+  p + a {
+      background: #fff;
+      display: block;
+      padding: .5em .75em;
+      margin: .25em auto 0;
+      text-align: center;
+      text-decoration: underline;
+      width: 100%;
+  }
 }
 
 /******************
@@ -246,10 +271,10 @@ header {
             position: relative;
             width: 100%;
             span {
-                font-size: 4em;
+                font-size: 5em;
                 position: absolute;
-                top: -20px;
-                left:0;
+                top: -10px;
+                left: 10px;
                 height: 50px;
                 width: 50px;
             }
@@ -355,6 +380,16 @@ button {
                 float: left;
                 width: 50%;
             }
+        }
+    }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        .card {
+            flex-basis: 33%;
+            flex-shrink: 100%;
+            margin: 1em auto;
+            padding: 1em;
         }
     }
   form {

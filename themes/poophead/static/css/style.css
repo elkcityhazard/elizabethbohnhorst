@@ -29,6 +29,10 @@ figcaption {
   text-align: center;
 }
 
+figure img {
+  border-radius: 50%;
+}
+
 img {
   display: block;
   margin: 0 auto;
@@ -118,10 +122,13 @@ li a:hover::after {
   max-width: 968px;
 }
 
+header {
+  margin-bottom: 1em;
+}
 header .row {
   display: block;
   width: 100%;
-  margin: 0 auto;
+  margin: 1em auto 0;
 }
 header .row:after {
   content: "";
@@ -216,9 +223,29 @@ header .row nav ul li a:visited {
   color: indigo;
 }
 
+.hello {
+  padding: 1em;
+}
+.hello h3 {
+  font-size: 2em;
+  text-align: left;
+}
+.hello h3 strong {
+  font-size: 2em;
+}
+
 .card {
   display: block;
   margin: 1em auto;
+}
+.card p + a {
+  background: #fff;
+  display: block;
+  padding: 0.5em 0.75em;
+  margin: 0.25em auto 0;
+  text-align: center;
+  text-decoration: underline;
+  width: 100%;
 }
 
 /******************
@@ -239,10 +266,10 @@ header .row nav ul li a:visited {
   width: 100%;
 }
 .quote-container .slide-container .slides span {
-  font-size: 4em;
+  font-size: 5em;
   position: absolute;
-  top: -20px;
-  left: 0;
+  top: -10px;
+  left: 10px;
   height: 50px;
   width: 50px;
 }
@@ -340,6 +367,17 @@ button {
   header .row .col {
     float: left;
     width: 50%;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card-container .card {
+    flex-basis: 33%;
+    flex-shrink: 100%;
+    margin: 1em auto;
+    padding: 1em;
   }
 
   form {
