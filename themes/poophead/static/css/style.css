@@ -65,6 +65,12 @@ p {
   padding-top: 1em;
 }
 
+h3 + p.description {
+  color: #888;
+  font-style: italic;
+  font-weight: 400;
+}
+
 a {
   font-size: 1.25em;
   text-decoration: none;
@@ -374,7 +380,7 @@ button {
     flex-wrap: wrap;
   }
   .card-container .card {
-    flex-basis: 33%;
+    flex-basis: 50%;
     flex-shrink: 100%;
     margin: 1em auto;
     padding: 1em;
@@ -382,15 +388,27 @@ button {
 
   form {
     margin: 0 auto;
-    max-width: auto;
+    width: 768px;
   }
   form .form-control {
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 0 auto;
-    max-width: 400px;
+    text-align: left;
+    width: 100%;
   }
   form .form-control:last-child {
-    justify-content: space-evenly;
+    float: right;
+    margin-right: 2.5em;
+    flex: 1;
+  }
+  form .form-control label {
+    flex: 1;
+  }
+  form .form-control .message-control {
+    flex: 2;
+  }
+  form .form-control .message-control textarea {
+    max-width: unset;
     width: 100%;
   }
   form button {

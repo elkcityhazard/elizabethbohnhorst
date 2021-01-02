@@ -65,6 +65,12 @@ p {
   padding-top: 1em;
 }
 
+h3 + p.description {
+    color: #888;
+    font-style: italic;
+    font-weight: 400;
+}
+
 a {
   font-size: 1.25em;
   text-decoration: none;
@@ -386,7 +392,7 @@ button {
         display: flex;
         flex-wrap: wrap;
         .card {
-            flex-basis: 33%;
+            flex-basis: 50%;
             flex-shrink: 100%;
             margin: 1em auto;
             padding: 1em;
@@ -394,14 +400,26 @@ button {
     }
   form {
     margin: 0 auto;
-    max-width: auto;
+    width: 768px;
     .form-control {
-      justify-content: space-around;
+      justify-content: flex-start;
       margin: 0 auto;
-      max-width: 400px;
+      text-align: left;
+      width: 100%;
       &:last-child {
-        justify-content: space-evenly;
-        width: 100%;
+        float: right;
+        margin-right: 2.5em;
+        flex: 1;
+      }
+      label {
+          flex: 1;
+      }
+      .message-control {
+          flex: 2;
+          textarea {
+              max-width: unset;
+              width: 100%;
+          }
       }
     }
     button {
