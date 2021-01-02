@@ -56,6 +56,7 @@
               <header>
                   <h3>Hello, my name is <strong>Elizabeth Bohnhorst</strong>.</h3>
               </header>
+              {{ partial "components/quotes.html" . }}
           </div>
 
           <p></p>
@@ -63,6 +64,6 @@
       </header>
       {{ partial "components/featured-links.html" . }} {{ partial "components/social-contact.html" . }}
     </div>
-    <script src="{{ .Site.BaseURL}}js/script.js"></script>
+    <script src="{{ .Site.BaseURL}}js/script.js" async></script>
   </body>
 </html>

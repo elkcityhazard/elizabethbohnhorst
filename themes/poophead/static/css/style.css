@@ -221,6 +221,36 @@ header .row nav ul li a:visited {
   margin: 1em auto;
 }
 
+/******************
+**Qoute Container**
+*******************/
+.quote-container {
+  display: block;
+  width: 100%;
+}
+.quote-container .slide-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.quote-container .slide-container .slides {
+  padding: 1em 2em;
+  position: relative;
+  width: 100%;
+}
+.quote-container .slide-container .slides span {
+  font-size: 4em;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+}
+.quote-container .slide-container .slides #quote {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out 0.25s;
+}
+
 /*****************
 **Form Controls***
 ******************/
@@ -290,7 +320,7 @@ small {
 }
 
 .fadeIn {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 button {

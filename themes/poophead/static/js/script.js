@@ -86,3 +86,29 @@ contactForm.addEventListener("submit", (e) => {
 });
 
 init();
+
+(function () {
+  const quotes = [
+    "men dressed in the color of summer speak like a dancer alone on the stage,",
+    "we destroy ourselves with hope of futility and excrement",
+    "cockeyed lame goats drown moping exaltation strokes impotent shapeless",
+  ];
+  const slide = document.querySelector("#quote");
+
+  function quoteLoop() {
+      let i = 0;
+      let updateQuote = setInterval(() => {
+        slide.classList.remove('fadeIn');
+        setTimeout(() => {
+          slide.innerText = quotes[i];
+        slide.classList.add('fadeIn');
+        i++;
+        if (i >= quotes.length) {
+          i = 0;
+        }
+        }, 1000)
+      }, 6000)
+  }
+
+  quoteLoop();
+})();
