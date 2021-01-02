@@ -1,6 +1,6 @@
 ---
-title: Contact Elizabeth Bohnhorst
+title: Contact 
 layout: contact
+menu: ['main']
 ---
 
-Reach Out To Elizabeth Here

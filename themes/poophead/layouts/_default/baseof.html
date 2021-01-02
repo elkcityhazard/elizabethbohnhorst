@@ -2,10 +2,13 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
+        <div class="wrapper">
+            {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
+        </div>
+        <script src="{{ .Site.BaseURL}}js/script.js" async></script>
     </body>
 </html>

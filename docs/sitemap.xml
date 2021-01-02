@@ -3,20 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://elizabethbohnhorst.com/</loc>
-    <priority>0</priority>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://elizabethbohnhorst.com/categories/</loc>
+    <loc>/contact/</loc>
   </url>
   
   <url>
-    <loc>https://elizabethbohnhorst.com/contact/</loc>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>https://elizabethbohnhorst.com/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
