@@ -369,6 +369,35 @@ button {
   min-width: 60px;
 }
 
+.main-footer {
+  align-items: center;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-evenly;
+  margin: 1em auto;
+  padding: 0 3em;
+  width: 100ch;
+}
+.main-footer .col {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  text-align: center;
+}
+.main-footer .col ul li {
+  display: inline;
+}
+.main-footer .col ul li a {
+  display: inline;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 1em;
+}
+.main-footer .col ul li a:after {
+  display: none;
+}
+
 @media screen and (min-width: 968px) {
   header .row .col {
     float: left;

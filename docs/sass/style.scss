@@ -378,6 +378,37 @@ button {
   min-width: 60px;
 }
 
+.main-footer {
+  align-items: center;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-evenly;
+  margin: 1em auto;
+  padding: 0 3em;
+  width: 100ch;
+  .col {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: center;
+    ul {
+      li {
+        display: inline;
+        a {
+          display: inline;
+          font-size: 1em;
+          font-weight: 400;
+          padding: 1em;
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 968px) {
 
     header {

@@ -9,36 +9,7 @@
       <input type="checkbox" name="nav-toggle" id="nav-toggle" />
       <nav>
         
-<!-- menu start -->
-
-  <ul>
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-          {{ if .HasChildren }}
-              <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-                  <a href="#">
-                      {{ .Pre }}
-                      <span>{{ .Name }}</span>
-                  </a>
-              </li>
-              <ul class="sub-menu">
-                  {{ range .Children }}
-                      <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                          <a href="{{ .URL }}">{{ .Name }}</a>
-                      </li>
-                  {{ end }}
-              </ul>
-          {{ else }}
-              <li>
-                  <a href="{{ .URL }}">
-                      {{ .Pre }}
-                      <span>{{ .Name }}</span>
-                  </a>
-              </li>
-          {{ end }}
-      {{ end }}
-      
-  </ul>
+        {{ partial "components/navigation.html" . }}
       </nav>
     </div>
     {{ if .IsHome }} {{ partial "components/hero-banner.html" . }} {{ end }}

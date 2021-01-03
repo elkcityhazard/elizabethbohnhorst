@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About Me</title>
+      <link>/about/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque. Nunc sed augue lacus viverra vitae congue eu consequat. Urna molestie at elementum eu facilisis sed odio morbi. Proin libero nunc consequat interdum varius sit. Purus semper eget duis at tellus. Vitae congue mauris rhoncus aenean vel. Eget nullam non nisi est sit amet facilisis magna.</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
