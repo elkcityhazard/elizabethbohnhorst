@@ -41,23 +41,5 @@
   </ul>
       </nav>
     </div>
-    <div class="row">
-      <div class="col">
-        <figure>
-          <img
-            src="{{ .Site.BaseURL}}images/e-portrait.png"
-            alt="self portrait"
-          />
-        </figure>
-      </div>
-      <div class="col">
-          <header class="hello">
-              <h3>Hello, my name is <strong>Elizabeth Bohnhorst</strong>.</h3>
-              <p class="description">Elizabeth Bohnhorst's poetry has appeared in The Pinch, Camroc Press Review, Word Riot, The Austin Poetry Anthology, The Dunes Review, and elsewhere. She has a terrible short-term memory and would love advice on how to remedy this.</p>
-          </header>
-          {{ partial "components/quotes.html" . }}
-      </div>
-
-      <p></p>
-    </div>
+    {{ if .IsHome }} {{ partial "components/hero-banner.html" . }} {{ end }}
   </header>

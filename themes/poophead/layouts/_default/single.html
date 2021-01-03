@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="row">
+    <div class="col">
+        <header>
+            <h1>{{ .Params.title }}</h1>
+            <div class="meta"><strong>Published: </strong>{{ .PublishDate.Format "Mon, Jan 2, 2006" }}</div>
+            <div class="meta"><strong>Modified: </strong> {{ .Lastmod.Format "Mon, Jan 2, 2006 14:15 est" }}</div>
+        </header>
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}

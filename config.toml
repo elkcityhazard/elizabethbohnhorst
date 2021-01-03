@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Elizabeth Bohnhorst"
 theme = "poophead"
 publishDir = "docs"
-
+enableGitInfo = "true"
 
 
 
