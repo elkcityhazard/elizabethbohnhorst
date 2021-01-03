@@ -8,4 +8,4 @@ menu:
     weight: 1000
 
 ---
-Elizabeth Bohnhorst is a rock star! 
+Elizabeth Bohnhorst is an author, poet, and artist living in Traverse City, Michigan.
