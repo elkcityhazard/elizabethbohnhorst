@@ -128,6 +128,14 @@ li a:hover::after {
   max-width: 968px;
 }
 
+.row .col {
+  margin: 0 auto;
+  max-width: 60ch;
+}
+.row .col header .meta {
+  margin-top: 0.5em;
+}
+
 header {
   margin-bottom: 1em;
 }
