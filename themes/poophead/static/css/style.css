@@ -47,7 +47,7 @@ h4,
 h5,
 h6 {
   display: block;
-  margin: 0 auto;
+  margin: 0.5em auto;
   text-align: center;
 }
 
@@ -134,6 +134,27 @@ li a:hover::after {
 }
 .row .col header .meta {
   margin-top: 0.5em;
+}
+.row .article-header .article-header__title a.post-title {
+  text-decoration: underline;
+  transform: unset;
+}
+.row .article-header .article-header__title a.post-title:after {
+  display: none;
+  transform: unset;
+}
+.row .section-body__content a {
+  transition: opacity 350ms ease-in-out;
+}
+.row .section-body__content a:hover {
+  opacity: 0.66;
+}
+.row .section-body__content a:after {
+  display: none;
+}
+
+.h-100 {
+  height: unset;
 }
 
 header {
@@ -252,7 +273,8 @@ header .row nav ul li a:visited {
   display: block;
   margin: 1em auto;
 }
-.card p + a {
+
+p + a {
   background: #fff;
   display: block;
   padding: 0.5em 0.75em;
@@ -383,18 +405,23 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-content: space-evenly;
-  margin: 1em auto;
+  justify-content: center;
+  margin: 1vmax auto;
   padding: 0 3em;
-  width: 100ch;
+  width: 100%;
 }
 .main-footer .col {
   grid-column-start: 1;
   grid-column-end: 5;
   text-align: center;
 }
+.main-footer .col ul {
+  display: flex;
+  flex-direction: column;
+}
 .main-footer .col ul li {
   display: inline;
+  padding: 1vmin 1.5vmin;
 }
 .main-footer .col ul li a {
   display: inline;
@@ -450,6 +477,11 @@ button {
   }
   form button {
     display: inline;
+  }
+
+  .main-footer .col ul {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 

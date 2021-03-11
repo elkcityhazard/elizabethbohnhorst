@@ -47,9 +47,10 @@ h4,
 h5,
 h6 {
   display: block;
-  margin: 0 auto;
+  margin: .5em auto;
   text-align: center;
 }
+
 
 h3 strong {
     color: indigo;
@@ -138,6 +139,33 @@ li a {
       }
     }
   }
+  .article-header {
+    .article-header__title {
+      a.post-title {
+        text-decoration: underline;
+        transform: unset;
+        &:after {
+          display: none;
+          transform: unset;
+        }
+      }
+    }
+  }
+  .section-body__content { 
+    a {
+      transition: opacity 350ms ease-in-out;
+      &:hover {
+        opacity: .66;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.h-100 {
+  height: unset;
 }
 
 header {
@@ -262,6 +290,7 @@ header {
 .card {
   display: block;
   margin: 1em auto;
+  }
   p + a {
       background: #fff;
       display: block;
@@ -271,7 +300,6 @@ header {
       text-decoration: underline;
       width: 100%;
   }
-}
 
 /******************
 **Qoute Container**
@@ -396,17 +424,20 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-content: space-evenly;
-  margin: 1em auto;
+  justify-content: center;
+  margin: 1vmax auto;
   padding: 0 3em;
-  width: 100ch;
+  width: 100%;
   .col {
     grid-column-start: 1;
     grid-column-end: 5;
     text-align: center;
     ul {
+      display: flex;
+      flex-direction: column;
       li {
         display: inline;
+        padding: 1vmin 1.5vmin;
         a {
           display: inline;
           font-size: 1em;
@@ -467,6 +498,14 @@ button {
     }
     button {
         display: inline;
+    }
+  }
+  .main-footer {
+    .col {
+      ul {
+        flex-direction: row;
+        justify-content: center;
+      }
     }
   }
 }
