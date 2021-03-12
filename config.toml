@@ -6,6 +6,12 @@ publishDir = "docs"
 enableGitInfo = "true"
 
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  
+
+
 
 
 [menu]

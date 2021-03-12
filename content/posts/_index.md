@@ -1,6 +1,6 @@
 ---
 title: Blog
 layout: list
-menu: main
+menu: 
 weight: 100
 ---
